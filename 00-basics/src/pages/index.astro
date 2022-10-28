@@ -6,10 +6,19 @@ const title = 'Home Page';
 
 <Layout title="Welcome to Astro.">
 	<main>
+		<button id="button">Click Me</button>
 		<h1>{ title }</h1>
+		<h1>{`Its the ${title}`}</h1>
 		<ButtonGroup />
 	</main>
 </Layout>
+
+<script>
+  function handleClick () {
+    console.log("button clicked!");
+  }
+  document.getElementById("button").addEventListener("click", handleClick);
+</script>
 
 <style>
 	main {
