@@ -9,6 +9,9 @@ const visible = true;
 
 <Layout title="Welcome to Astro.">
 	<main>
+		
+		<Card slot="before"/>
+
 		<button id="button">Click Me</button>
 		<h1>{ title }</h1>
 		<h1>{`Its the ${title}`}</h1>
@@ -20,7 +23,8 @@ const visible = true;
 		</ul>
 		{visible && <p>Show me!</p>}
 
-		<Card />
+		
+		<Card slot="after"/>
 
 	</main>
 </Layout>
