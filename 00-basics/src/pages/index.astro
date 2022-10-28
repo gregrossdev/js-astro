@@ -2,6 +2,8 @@
 import ButtonGroup from '../components/UI/ButtonGroup.astro';
 import Layout from '../layouts/Layout.astro';
 const title = 'Home Page';
+const items = ["Dog", "Cat", "Platypus"];
+const visible = true;
 ---
 
 <Layout title="Welcome to Astro.">
@@ -10,6 +12,13 @@ const title = 'Home Page';
 		<h1>{ title }</h1>
 		<h1>{`Its the ${title}`}</h1>
 		<ButtonGroup />
+		<ul>
+			{items.map((item) => (
+				<li>{item}</li>
+			))}
+		</ul>
+		{visible && <p>Show me!</p>}
+
 	</main>
 </Layout>
 
