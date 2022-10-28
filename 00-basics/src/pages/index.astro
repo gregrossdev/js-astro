@@ -1,5 +1,6 @@
 ---
 import ButtonGroup from '../components/UI/ButtonGroup.astro';
+import Card from '../components/UI/Card.astro';
 import Layout from '../layouts/Layout.astro';
 const title = 'Home Page';
 const items = ["Dog", "Cat", "Platypus"];
@@ -18,6 +19,8 @@ const visible = true;
 			))}
 		</ul>
 		{visible && <p>Show me!</p>}
+
+		<Card />
 
 	</main>
 </Layout>
