@@ -26,9 +26,10 @@ const mar = posts.filter(
     <main>
       <section>
 				<!-- January -->
-        <ul>
+        <ul class="bg-slate-100">
           {
-            jan.map((post) => (
+            jan.map((post) => 
+            (
               <li>
                 <a href={post.url}>
                   <time datetime={post.frontmatter.pubDate}>
@@ -36,7 +37,7 @@ const mar = posts.filter(
                       "en-us",
                       {
                         month: "short",
-                        day: "numeric",
+                        day: "2-digit",
                       }
                     )}
                   </time>
@@ -50,14 +51,14 @@ const mar = posts.filter(
     </main>
     <Footer />
     <style>
-      section {
+      /* section {
         @apply flex flex-wrap gap-4 
-      }
+      } */
       ul {
-        @apply w-32 p-4 my-4 bg-slate-400 list-none flex-col rounded
+        @apply p-4 my-4 list-none flex flex-wrap rounded shadow-md
       }
       ul li {
-
+        @apply p-2
       }
     </style>
   </body>

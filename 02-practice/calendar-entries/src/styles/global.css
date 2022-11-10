@@ -9,11 +9,13 @@ body {
 	padding: 20px;
 	max-width: 65ch;
 	text-align: left;
-	background-color: #fff;
 	word-wrap: break-word;
 	overflow-wrap: break-word;
 	line-height: 1.5;
-	color: #444;
+}
+
+body {
+	@apply bg-slate-50
 }
 h1,
 h2,
