@@ -6,40 +6,40 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
 
 const posts = await Astro.glob("./months/**/*.{md,mdx}");
 const jan = posts.filter(
-  (post) => post.frontmatter.pubDate.slice(0, 3) == "Jan"
+  (post) => post.frontmatter.date.slice(0, 3) == "Jan"
 );
 const feb = posts.filter(
-  (post) => post.frontmatter.pubDate.slice(0, 3) == "Feb"
+  (post) => post.frontmatter.date.slice(0, 3) == "Feb"
 );
 const mar = posts.filter(
-  (post) => post.frontmatter.pubDate.slice(0, 3) == "Mar"
+  (post) => post.frontmatter.date.slice(0, 3) == "Mar"
 );
 const apr = posts.filter(
-  (post) => post.frontmatter.pubDate.slice(0, 3) == "Apr"
+  (post) => post.frontmatter.date.slice(0, 3) == "Apr"
 );
 const may = posts.filter(
-  (post) => post.frontmatter.pubDate.slice(0, 3) == "May"
+  (post) => post.frontmatter.date.slice(0, 3) == "May"
 );
 const jun = posts.filter(
-  (post) => post.frontmatter.pubDate.slice(0, 3) == "Jun"
+  (post) => post.frontmatter.date.slice(0, 3) == "Jun"
 );
 const jul = posts.filter(
-  (post) => post.frontmatter.pubDate.slice(0, 3) == "Jul"
+  (post) => post.frontmatter.date.slice(0, 3) == "Jul"
 );
 const aug = posts.filter(
-  (post) => post.frontmatter.pubDate.slice(0, 3) == "Aug"
+  (post) => post.frontmatter.date.slice(0, 3) == "Aug"
 );
 const sep = posts.filter(
-  (post) => post.frontmatter.pubDate.slice(0, 3) == "Sep"
+  (post) => post.frontmatter.date.slice(0, 3) == "Sep"
 );
 const oct = posts.filter(
-  (post) => post.frontmatter.pubDate.slice(0, 3) == "Oct"
+  (post) => post.frontmatter.date.slice(0, 3) == "Oct"
 );
 const nov = posts.filter(
-  (post) => post.frontmatter.pubDate.slice(0, 3) == "Nov"
+  (post) => post.frontmatter.date.slice(0, 3) == "Nov"
 );
 const dec = posts.filter(
-  (post) => post.frontmatter.pubDate.slice(0, 3) == "Dec"
+  (post) => post.frontmatter.date.slice(0, 3) == "Dec"
 );
 ---
 
@@ -59,8 +59,8 @@ const dec = posts.filter(
             (
               <li>
                 <a href={post.url}>
-                  <time datetime={post.frontmatter.pubDate}>
-                    {new Date(post.frontmatter.pubDate).toLocaleDateString(
+                  <time datetime={post.frontmatter.date}>
+                    {new Date(post.frontmatter.date).toLocaleDateString(
                       "en-us",
                       {
                         month: "short",
@@ -80,8 +80,8 @@ const dec = posts.filter(
             (
               <li>
                 <a href={post.url}>
-                  <time datetime={post.frontmatter.pubDate}>
-                    {new Date(post.frontmatter.pubDate).toLocaleDateString(
+                  <time datetime={post.frontmatter.date}>
+                    {new Date(post.frontmatter.date).toLocaleDateString(
                       "en-us",
                       {
                         month: "short",
@@ -101,8 +101,8 @@ const dec = posts.filter(
             (
               <li>
                 <a href={post.url}>
-                  <time datetime={post.frontmatter.pubDate}>
-                    {new Date(post.frontmatter.pubDate).toLocaleDateString(
+                  <time datetime={post.frontmatter.date}>
+                    {new Date(post.frontmatter.date).toLocaleDateString(
                       "en-us",
                       {
                         month: "short",
@@ -122,8 +122,8 @@ const dec = posts.filter(
             (
               <li>
                 <a href={post.url}>
-                  <time datetime={post.frontmatter.pubDate}>
-                    {new Date(post.frontmatter.pubDate).toLocaleDateString(
+                  <time datetime={post.frontmatter.date}>
+                    {new Date(post.frontmatter.date).toLocaleDateString(
                       "en-us",
                       {
                         month: "short",
@@ -143,8 +143,8 @@ const dec = posts.filter(
             (
               <li>
                 <a href={post.url}>
-                  <time datetime={post.frontmatter.pubDate}>
-                    {new Date(post.frontmatter.pubDate).toLocaleDateString(
+                  <time datetime={post.frontmatter.date}>
+                    {new Date(post.frontmatter.date).toLocaleDateString(
                       "en-us",
                       {
                         month: "short",
@@ -164,8 +164,8 @@ const dec = posts.filter(
             (
               <li>
                 <a href={post.url}>
-                  <time datetime={post.frontmatter.pubDate}>
-                    {new Date(post.frontmatter.pubDate).toLocaleDateString(
+                  <time datetime={post.frontmatter.date}>
+                    {new Date(post.frontmatter.date).toLocaleDateString(
                       "en-us",
                       {
                         month: "short",
@@ -185,8 +185,8 @@ const dec = posts.filter(
             (
               <li>
                 <a href={post.url}>
-                  <time datetime={post.frontmatter.pubDate}>
-                    {new Date(post.frontmatter.pubDate).toLocaleDateString(
+                  <time datetime={post.frontmatter.date}>
+                    {new Date(post.frontmatter.date).toLocaleDateString(
                       "en-us",
                       {
                         month: "short",
@@ -206,8 +206,8 @@ const dec = posts.filter(
             (
               <li>
                 <a href={post.url}>
-                  <time datetime={post.frontmatter.pubDate}>
-                    {new Date(post.frontmatter.pubDate).toLocaleDateString(
+                  <time datetime={post.frontmatter.date}>
+                    {new Date(post.frontmatter.date).toLocaleDateString(
                       "en-us",
                       {
                         month: "short",
@@ -227,8 +227,8 @@ const dec = posts.filter(
             (
               <li>
                 <a href={post.url}>
-                  <time datetime={post.frontmatter.pubDate}>
-                    {new Date(post.frontmatter.pubDate).toLocaleDateString(
+                  <time datetime={post.frontmatter.date}>
+                    {new Date(post.frontmatter.date).toLocaleDateString(
                       "en-us",
                       {
                         month: "short",
@@ -248,8 +248,8 @@ const dec = posts.filter(
             (
               <li>
                 <a href={post.url}>
-                  <time datetime={post.frontmatter.pubDate}>
-                    {new Date(post.frontmatter.pubDate).toLocaleDateString(
+                  <time datetime={post.frontmatter.date}>
+                    {new Date(post.frontmatter.date).toLocaleDateString(
                       "en-us",
                       {
                         month: "short",
@@ -269,8 +269,8 @@ const dec = posts.filter(
             (
               <li>
                 <a href={post.url}>
-                  <time datetime={post.frontmatter.pubDate}>
-                    {new Date(post.frontmatter.pubDate).toLocaleDateString(
+                  <time datetime={post.frontmatter.date}>
+                    {new Date(post.frontmatter.date).toLocaleDateString(
                       "en-us",
                       {
                         month: "short",
@@ -290,8 +290,8 @@ const dec = posts.filter(
             (
               <li>
                 <a href={post.url}>
-                  <time datetime={post.frontmatter.pubDate}>
-                    {new Date(post.frontmatter.pubDate).toLocaleDateString(
+                  <time datetime={post.frontmatter.date}>
+                    {new Date(post.frontmatter.date).toLocaleDateString(
                       "en-us",
                       {
                         month: "short",
