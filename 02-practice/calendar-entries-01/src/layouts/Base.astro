@@ -1,0 +1,23 @@
+---
+import Nav from "../components/layout/Nav.astro";
+
+const pageTitle = "Home Page";
+const {title} = Astro.props; 
+import '../styles/global.css';
+---
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{pageTitle}</title>
+  </head>
+  <body>
+    <Nav />
+    <main>
+        <!-- Content Renders Here!!! -->
+        <slot />
+    </main>
+  </body>
+</html>

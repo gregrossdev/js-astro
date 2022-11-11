@@ -1,0 +1,23 @@
+---
+const { title, date } = Astro.props;
+---
+
+  <article>
+    <time>{date}</time>
+    <h2>{title}</h2>
+    <hr />
+    <!-- Content Renders Here!!! -->
+    <slot />
+  </article>
+
+  <style>
+    h2 {
+      @apply font-sans text-4xl pt-1 pb-3
+    }
+    time, span {
+      @apply font-sans text-sm 
+    }
+    hr {
+      @apply mb-2
+    }
+  </style>
