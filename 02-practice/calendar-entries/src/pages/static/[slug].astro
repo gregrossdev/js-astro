@@ -1,0 +1,23 @@
+---
+export async function getStaticPaths() {
+  const url = "http://localhost:8000/wp-json/wp/v2/pages/";
+  const res = await fetch(url);
+  const data = await res.json();
+
+  return data.map((page) => {
+    return {
+      params: { slug: page.slug },
+      props: { page },
+    };
+  });
+}
+const { slug } = Astro.params;
+const { page } = Astro.props;
+---
+
+<body>
+  <h1>{page.title.rendered}</h1>
+  <h2 set:html={page.title.rendered}></h2>
+
+  <article set:html={page.content.rendered} />
+</body>
