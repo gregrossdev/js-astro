@@ -1,0 +1,19 @@
+---
+import Social from "../components/layout/Social.astro"
+import Nav from "../components/layout/Nav.astro";
+
+---
+
+<html lang="en">
+  <head>
+    <Social title="title" description="description" /> 
+  </head>
+  <body class="body">
+    <div class="body-container">
+      <Nav />
+      <main class="main">
+        <slot />
+      </main>
+    </div>
+  </body>
+</html>

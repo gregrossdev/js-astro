@@ -1,0 +1,27 @@
+---
+import Social from "../components/layout/Social.astro";
+import Nav from "../components/layout/Nav.astro";
+
+const {
+	content: { title, date },
+} = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <Social title={title} description={date} /> 
+  </head>
+  <body class="body">
+    <div class="body-container">
+      <Nav />
+      <main class="main">  
+        <article>
+          <time class="date">{date}</time>
+          <h2 class="title">{title}</h2>
+          <hr />
+          <slot />
+        </article>
+      </main>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,234 @@
+---
+import Base from "../layouts/Base.astro";
+
+const posts = await Astro.glob("./date/**/*.{md,mdx}");
+const jan = posts.filter((post) => post.frontmatter.date.slice(0, 3) == "Jan");
+const feb = posts.filter((post) => post.frontmatter.date.slice(0, 3) == "Feb");
+const mar = posts.filter((post) => post.frontmatter.date.slice(0, 3) == "Mar");
+const apr = posts.filter((post) => post.frontmatter.date.slice(0, 3) == "Apr");
+const may = posts.filter((post) => post.frontmatter.date.slice(0, 3) == "May");
+const jun = posts.filter((post) => post.frontmatter.date.slice(0, 3) == "Jun");
+const jul = posts.filter((post) => post.frontmatter.date.slice(0, 3) == "Jul");
+const aug = posts.filter((post) => post.frontmatter.date.slice(0, 3) == "Aug");
+const sep = posts.filter((post) => post.frontmatter.date.slice(0, 3) == "Sep");
+const oct = posts.filter((post) => post.frontmatter.date.slice(0, 3) == "Oct");
+const nov = posts.filter((post) => post.frontmatter.date.slice(0, 3) == "Nov");
+const dec = posts.filter((post) => post.frontmatter.date.slice(0, 3) == "Dec");
+---
+
+<Base>
+  <section>
+    <!-- January -->
+    <ul class="month">
+      {
+        jan.map((post) => (
+          <li class="day">
+            <a href={post.url}>
+              <time datetime={post.frontmatter.date}>
+                {new Date(post.frontmatter.date).toLocaleDateString("en-us", {
+                  month: "short",
+                  day: "2-digit",
+                })}
+              </time>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+    <!-- Febuary -->
+    <ul class="month">
+      {
+        feb.map((post) => (
+          <li class="day">
+            <a href={post.url}>
+              <time datetime={post.frontmatter.date}>
+                {new Date(post.frontmatter.date).toLocaleDateString("en-us", {
+                  month: "short",
+                  day: "2-digit",
+                })}
+              </time>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+    <!-- March -->
+    <ul class="month">
+      {
+        mar.map((post) => (
+          <li class="day">
+            <a href={post.url}>
+              <time datetime={post.frontmatter.date}>
+                {new Date(post.frontmatter.date).toLocaleDateString("en-us", {
+                  month: "short",
+                  day: "2-digit",
+                })}
+              </time>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+    <!-- April -->
+    <ul class="month">
+      {
+        apr.map((post) => (
+          <li class="day">
+            <a href={post.url}>
+              <time datetime={post.frontmatter.date}>
+                {new Date(post.frontmatter.date).toLocaleDateString("en-us", {
+                  month: "short",
+                  day: "2-digit",
+                })}
+              </time>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+    <!-- May -->
+    <ul class="month">
+      {
+        may.map((post) => (
+          <li class="day">
+            <a href={post.url}>
+              <time datetime={post.frontmatter.date}>
+                {new Date(post.frontmatter.date).toLocaleDateString("en-us", {
+                  month: "short",
+                  day: "2-digit",
+                })}
+              </time>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+    <!-- June -->
+    <ul class="month">
+      {
+        jun.map((post) => (
+          <li class="day">
+            <a href={post.url}>
+              <time datetime={post.frontmatter.date}>
+                {new Date(post.frontmatter.date).toLocaleDateString("en-us", {
+                  month: "short",
+                  day: "2-digit",
+                })}
+              </time>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+    <!-- July -->
+    <ul class="month">
+      {
+        jul.map((post) => (
+          <li class="day">
+            <a href={post.url}>
+              <time datetime={post.frontmatter.date}>
+                {new Date(post.frontmatter.date).toLocaleDateString("en-us", {
+                  month: "short",
+                  day: "2-digit",
+                })}
+              </time>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+    <!-- August -->
+    <ul class="month">
+      {
+        aug.map((post) => (
+          <li class="day">
+            <a href={post.url}>
+              <time datetime={post.frontmatter.date}>
+                {new Date(post.frontmatter.date).toLocaleDateString("en-us", {
+                  month: "short",
+                  day: "2-digit",
+                })}
+              </time>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+    <!-- Septemeber -->
+    <ul class="month">
+      {
+        sep.map((post) => (
+          <li class="day">
+            <a href={post.url}>
+              <time datetime={post.frontmatter.date}>
+                {new Date(post.frontmatter.date).toLocaleDateString("en-us", {
+                  month: "short",
+                  day: "2-digit",
+                })}
+              </time>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+    <!-- October -->
+    <ul class="month">
+      {
+        oct.map((post) => (
+          <li class="day">
+            <a href={post.url}>
+              <time datetime={post.frontmatter.date}>
+                {new Date(post.frontmatter.date).toLocaleDateString("en-us", {
+                  month: "short",
+                  day: "2-digit",
+                })}
+              </time>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+    <!-- November -->
+    <ul class="month">
+      {
+        nov.map((post) => (
+          <li class="day">
+            <a href={post.url}>
+              <time datetime={post.frontmatter.date}>
+                {new Date(post.frontmatter.date).toLocaleDateString("en-us", {
+                  month: "short",
+                  day: "2-digit",
+                })}
+              </time>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+    <!-- Dec -->
+    <ul class="month">
+      {
+        dec.map((post) => (
+          <li class="day">
+            <a href={post.url}>
+              <time datetime={post.frontmatter.date}>
+                {new Date(post.frontmatter.date).toLocaleDateString("en-us", {
+                  month: "short",
+                  day: "2-digit",
+                })}
+              </time>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+</Base>
+<style>
+  .month {
+    @apply bg-slate-100 p-4 my-4 list-none flex flex-wrap rounded shadow-md;
+  }
+  .day {
+    @apply p-2;
+  }
+</style>

@@ -1,0 +1,11 @@
+---
+const { title, date } = Astro.props;
+---
+
+<article>
+  <time class="date">{date}</time>
+  <h2 class="title">{title}</h2>
+  <hr />
+  <!-- Content Renders Here!!! -->
+  <slot />
+</article>

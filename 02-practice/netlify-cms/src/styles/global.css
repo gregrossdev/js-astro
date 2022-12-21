@@ -1,0 +1,19 @@
+.body {
+  @apply max-w-prose m-auto p-4 bg-slate-50 font-sans leading-relaxed text-left break-words
+}
+
+.body-container {
+  @apply container mx-auto
+}
+
+.main p,
+.main hr {
+  @apply mb-2;
+}
+
+.title {
+  @apply font-sans text-4xl pt-1 pb-3;
+}
+.date {
+  @apply font-sans text-sm;
+}

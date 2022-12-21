@@ -1,0 +1,30 @@
+---
+import Base from "../layouts/Base.astro";
+import Post from "../components/Post.astro"; 
+const posts = await Astro.glob("./date/**/*.{md,mdx}");
+let today = new Date().toLocaleDateString("en-us", {
+  month: "short",
+  day: "2-digit",
+});
+const todaysDate = posts.filter(
+  (post) =>
+    new Date(post.frontmatter.date).toLocaleDateString("en-us", {
+      month: "short",
+      day: "2-digit",
+    }) === today
+);
+---
+
+<Base>
+  {
+    todaysDate.map((post) => (
+      <Post title={post.frontmatter.title} date={post.frontmatter.date}>
+        <section set:html={post.compiledContent()} />
+      </Post>
+    ))
+  }
+</Base>
+
+<script>
+  
+</script>
